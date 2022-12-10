@@ -148,11 +148,11 @@ ul {
 .hero {
     padding-top: 192px;
     padding-bottom: 192px;
-    background-color: var(--title-text-color);
+    
     text-align: center;
 
     max-width: 1440px;
-    height: 603px;
+  
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero.jpg);
@@ -188,18 +188,23 @@ ul {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
-    background-color: #4D5AE5;
+    background-color: var(--accent-color);
     color: var(--hero-color);
     letter-spacing: 0.04em;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-    background-color: var(--button-color);
-    color: var(--hero-color);
     cursor: pointer;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 } 
+
+.hero-button:active {
+    background-color: var(--button-color);
+    
+}
+
 
 
 .visually-hidden { 
@@ -249,6 +254,7 @@ ul {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: 8px;
 }
 
 .item-list:nth-child(1)::before {
@@ -334,8 +340,10 @@ ul {
 
 .btn:hover,
 .btn:focus {
+    display: block;
     background-color: var(--accent-color);
-    color: var(--hero-color)
+    color: var(--hero-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio {
@@ -392,7 +400,7 @@ ul {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-bottom: 12px;
+    
 }
 
 .team-list {
@@ -449,11 +457,12 @@ ul {
  
 }
 
-.portfolio-list-link:hover
 
+.portfolio-link-hover:hover,
+.portfolio-link-hover:focus
  {
-    cursor: pointer;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08) 0px 1px 1px rgba(46, 47, 66, 0.16) 0px 2px 1px rgba(46, 47, 66, 0.08);
+    display: block;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 
@@ -541,30 +550,34 @@ ul {
 
 .footer-list {
     display: flex;
-    
+    justify-content: center;
     gap: 16px;
 
 }
 
-.footer-list-item {
+.footer-list-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: var(--text-color);
 
 }
 
-.footer-list-item:hover,
-.footer-list-item:focus {
+
+.footer-list-link:hover,
+.footer-list-link:focus {
+    
     background-color: #31D0AA;
 }
 
+
+
 .footer-list-icon {
     fill: var(--studio-color);
+    justify-items: center;
 }
 
 

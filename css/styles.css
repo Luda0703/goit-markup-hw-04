@@ -156,6 +156,7 @@ ul {
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero.jpg);
+    background-color: var(--title-text-color);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -196,7 +197,8 @@ ul {
 .hero-button:focus {
     background-color: var(--button-color);
     color: var(--hero-color);
-    cursor: pointer
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
 } 
 
 
@@ -254,7 +256,7 @@ ul {
 }
 
 .item-list:nth-child(2)::before {
-    background-image: url(../images/Icon\ 2\ .svg);
+    background-image: url(../images/Icon\ 2.svg);
 }
 
 .item-list:nth-child(3)::before {
@@ -297,11 +299,7 @@ ul {
     letter-spacing: 0.02em;
 }
 
-.section-text {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-}
+
 
 .headline-text {
     font-size: 16px;
@@ -390,6 +388,33 @@ ul {
     margin-left: 0;
 }
 
+.section-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+}
+
+.team-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.team-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
+.team-list-icon {
+    fill: var(--studio-color);
+}
+
 
 
 .row {
@@ -411,6 +436,8 @@ ul {
 }
 
 
+
+
 .subject {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -418,9 +445,16 @@ ul {
     border-left: 0.5px solid var(--studio-color);
     border-right: 0.5px solid var(--studio-color);
     border-bottom: 0.5px solid var(--studio-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
  
 }
 
+.portfolio-list-link:hover
+
+ {
+    cursor: pointer;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08) 0px 1px 1px rgba(46, 47, 66, 0.16) 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 
 .servise {
@@ -431,51 +465,29 @@ ul {
     color: var(--primary-text-color);
 }
 
-.clients {
+.client-list {
     display: flex;
-    text-align: center;
-    
+    justify-content: center;
+    gap: 24px;
 }
 
-.clients .client-one,
-.clients .client-two,
-.clients .client-three,
-.clients .client-four,
-.clients .client-five,
-.clients .client-six  {
- display: block;
- margin-left: 24px ;
-    content: "";
+.client-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 168px;
     height: 88px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    fill: #8E8F99 
 }
 
-.client-one {
-    background-image: url(../images/Client\ 1.svg);
+.client-list-link:hover,
+.client-list-link:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
-.client-two {
-    background-image: url(../images/Client\ 2.svg);
-}
-
-.client-three {
-    background-image: url(../images/Client\ 3.svg);
-}
-
-.client-four {
-    background-image: url(../images/Client\ 4.svg);
-}
-
-.client-five {
-    background-image: url(../images/Client\ 5.svg);
-}
-
-.client-six {
-    background-image: url(../images/Client\ 6.svg);
-}
 
 
 .footer {
@@ -484,8 +496,22 @@ ul {
     background-color: var(--title-text-color);
 }
 
-.container .end {
-    align-items: flex-start
+.container-footer {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+
+.container-end {
+    margin-left: 120px;
+}
+
+.container-end:first-child {
+    margin-left: 0;
 }
 
 .white-studio {
@@ -500,4 +526,47 @@ ul {
     color: var(--desc-color);
     letter-spacing: 0.02em;
 }
+
+.footer-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--hero-color);
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    
+    margin-bottom: 16px;
+    
+}
+
+.footer-list {
+    display: flex;
+    
+    gap: 16px;
+
+}
+
+.footer-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.01);
+
+}
+
+.footer-list-item:hover,
+.footer-list-item:focus {
+    background-color: #31D0AA;
+}
+
+.footer-list-icon {
+    fill: var(--studio-color);
+}
+
+
+    
 
